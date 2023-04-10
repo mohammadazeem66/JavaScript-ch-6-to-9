@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript-ch-6 to 9</title>
+</head>
+<body>
+    
+
+
+
+    <script>
+
+
+    //1. Write a program to take a number in a variable, do the required arithmetic to display the following result in your browser:   
+   
+     document.write("<h1> Q1 </h1>")
+    let a = 10;
+        document.write("the value of a is   :" + a);
+         ++a;
+        document.write("<br>the value of ++a   :" + a);
+        a++;
+        document.write("<br>the value of a++   :" + a);
+        --a;
+        document.write("<br>the value of --a   :"+ a)
+        a--;
+        document.write("<br>the value of a--   : " + a);
+
+
+     //2. What will be the output in variables a, b & result after execution of the following script:
+       // var a = 2, b = 1;
+       // var result = --a - --b + ++b + b--;
+       // Explain the output at each stage:
+       // --a;
+       // --a - --b;
+       // --a - --b + ++b;
+       // --a - --b + ++b + b--;   
+
+
+       document.write("<h1> Q2 </h1>")
+       var aa = 2, b = 1;
+       --aa; 
+       document.write("<br>" , aa )
+       
+       --aa - --b;
+       document.write("<br>" , aa , b )
+       
+       --aa - --b + ++b;
+       document.write("<br>", aa , b)
+       
+       --aa - --b + ++b + b--;
+       document.write("<br>", a , b )
+                   
+       var result = --aa - --b + ++b + b--;
+       document.write(" <br> the result is " + result) 
+
+
+
+    //  3. Write a program that takes input a name from user & greet the user.
+
+       document.write("<h1> Q3 </h1>")
+       var name= prompt("Enter You'r Name");
+       document.write("Hello ! " + name);
+
+    //  4.
+
+    document.write("<h1> Q4. </h1>")
+
+    // 5. Write a program to take input a number from user & display it’s multiplication table on your browser. If user does not enter a new number, multiplication table of 5 should be displayed by default.
+
+    document.write("<h1> Q5 </h1>")
+    var n2,n1;
+    var  number = prompt("enter a number");
+if(number !== 5)
+{
+
+ n1 = number * 1;
+document.write(number,"* 1 =",n1);
+n1 = number * 2;
+document.write( "<br>",number," * 2 =",n1);
+n1 = number * 3;
+document.write("<br>",number,"  * 3 =",n1);
+n1 = number* 4;
+document.write("<br>",number,"* 4 =",n1);
+n1 =number* 5;
+document.write("<br>", number," * 5 =",n1);
+n1 = number *6;
+document.write("<br>",number," * 6 =",n1);
+n1 = number * 7;
+document.write("<br>",number," * 7=",n1);
+n1 = number * 8;
+document.write("<br>",number,"* 8 =",n1);
+n1 = number * 9;
+document.write("<br>",number,"* 9 =",n1);
+n1 =  number * 10;
+document.write("<br>",number,"* 10 =",n1);}
+
+
+else{
+    
+ n2 = 5 * 1;
+document.write(5,"* 1 =",n1);
+n2 = 5 * 2;
+document.write( "<br>",5," * 2 =",n1);
+n1 = 5 * 3;
+document.write("<br>",5,"  * 3 =",n1);
+n2 = 5 * 4;
+document.write("<br>",5,"* 4 =",n1);
+n2 = 5* 5;
+document.write("<br>", 5," * 5 =",n1);
+n1 = 5 *6;
+document.write("<br>",5," * 6 =",n1);
+n2 = 5 * 7;
+document.write("<br>",5," * 7=",n1);
+n1 = 5 * 8;
+document.write("<br>",5,"* 8 =",n1);
+n2 = 5 * 9;
+document.write("<br>",5,"* 9 =",n1);
+n2 = 5 * 10;
+document.write("<br>",5,"* 10 =",n1);
+
+}
+
+
+// 6. Take
+   // a) Take three subjects name from user and store them in 3
+   // different variables.
+   // b) Total marks for each subject is 100, store it in another
+   // variable.
+   // c) Take obtained marks for first subject from user and
+   // stored it in different variable.
+   // d) Take obtained marks for remaining 2 subjects from user
+   //    and store them in variables.
+   // e) Now calculate total marks and percentage and show the
+   //    result in browser like this.(Hint: user table)
+
+
+   document.write("<h1> Q6 </h1>")
+
+   let subject1 = prompt("enter subject 1"),
+          subject2 = prompt("enter subject 2"),
+             subject3 = prompt("enter subject 3");
+
+         let mark1 = +prompt("obtained marks 1")
+            , mark2 = +prompt("obtained marks 2")
+              , mark3 = +prompt("obtained marks 3"),
+             
+             total1=100,
+             total2=100,
+             total3=100,
+             percentage_1,
+            percentage_2,
+            percentage_3,
+            Totalmark,
+            obtained;
+
+Totalmark=total1+total2+total3;
+obtained=mark1+mark2+mark3;
+
+
+             percentage_1=(mark1/total1)*100;
+              percentage_2=(mark2/total2)*100;
+             percentage_3=(mark3/total3)*100;
+             Fin=(obtained/Totalmark)*100; 
+                                                 
+document.write("<tr> <td> Subject </td>  "+"  <td> Total </td>  "+"   <td> obtained </td>  "+"  <td> Percentage </td> </tr><br>");
+
+document.write("<tr> <td> "+subject1+" </td>"+" <td> "+total1+" </td>"+"     "+"<td> "+mark1+" </td>"+" "+"<td> "+percentage_1+"% </td>"+"  </tr> <br>");
+document.write("<tr> <td> "+subject2+" </td>"+" <td> "+total2+" </td>"+"     "+"<td> "+mark2+" </td>"+" "+"<td> "+percentage_2+" % </td>"+"  </tr> <br>");
+document.write("<tr> <td> "+subject3+" </td>"+" <td> "+total3+" </td>"+"     "+"<td> "+mark3+" </td>"+" "+"<td> "+percentage_3+"% </td>"+"  </tr> <br>");
+document .write("<tr> <td> TOTAL </td>"+" <td> <strong>"+Totalmark+"</strong> </td>"+"     "+"<td><strong>"+obtained+"</strong> </td>"+" "+"<td> "+Fin+" % </td>"+"  </tr> <br>")
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>
